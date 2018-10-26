@@ -1,10 +1,10 @@
-node_modules
-plugins
-platforms
-package-lock.json
-.sourcemaps
-www
-tmp.js
-*.keystore
-.DS_Store
-**/.DS_Store
+# node_modules
+# plugins
+# platforms
+# package-lock.json
+# .sourcemaps
+# www
+# tmp.js
+# *.keystore
+# .DS_Store
+# **/.DS_Store
