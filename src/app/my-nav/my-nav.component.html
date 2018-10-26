@@ -1,0 +1,43 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav hide"
+    fixedInViewport="true"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'"
+    [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [opened]="!(isHandset | async)!.matches">
+    <mat-toolbar color="primary" class="toobarHeight">
+		<mat-card color="primary">
+			<img mat-card-avatar class="example-header-image" src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="avatar">
+			<p class="position">Stella Sikhila</p>
+		</mat-card>
+    </mat-toolbar>
+    <mat-nav-list>
+	  <a mat-list-item href="/head/categorys">View Videos</a>
+	  <mat-divider></mat-divider>
+	  <a mat-list-item (click)="logout()">Log Out</a>
+	  <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="(isHandset | async)!.matches">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+	  <span>SmartDuka</span>
+	  
+    </mat-toolbar>
+    <router-outlet>
+
+  </router-outlet>
+  
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

@@ -1,0 +1,36 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+.toobarHeight{
+  height: 180px;
+}
+mat-card.mat-card {
+  background: #3F51B5;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+  margin-top: -18px;
+}
+.position {
+  margin-top: -1px;
+  margin-bottom: -10px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  
+}

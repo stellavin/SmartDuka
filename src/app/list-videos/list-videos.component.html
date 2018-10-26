@@ -1,0 +1,28 @@
+<div class="margin">
+  <div class="top alignItem"> 
+      <h3>
+          {{category.name}}
+				</h3>
+				<p>{{category.description}}</p>
+  </div>
+
+<div class="top cardSize">
+		<mat-nav-list *ngIf="!filteredCategories.length">
+			<p>No video or movie ....check later</p>
+			</mat-nav-list>
+
+		<mat-nav-list *ngIf="filteredCategories.length">
+			<mat-divider></mat-divider>
+			<div *ngFor="let video of filteredCategories">
+			<mat-list-item >
+				<a matLine >{{video.name}}</a>
+				<button mat-icon-button (click)=viewVideo(video)>
+					View
+				</button>
+			</mat-list-item>
+			<mat-divider></mat-divider>
+		</div>
+		</mat-nav-list>
+  </div>
+
+</div>

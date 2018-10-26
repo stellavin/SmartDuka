@@ -1,0 +1,61 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+	  <span>SmartDuka</span>
+	  
+    </mat-toolbar>
+    <router-outlet>
+
+	</router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<div class="margin">
+    <div class="top alignItem"> 
+        <h3>
+            SmartDuka Register
+          </h3>
+    </div>
+  
+  <div class=" cardSize">
+     
+<mat-card class="login-card">
+    <div *ngIf="success" class="success">{{success}}</div>
+  <div *ngIf="errorMsg" class="alert alert-danger alert-dismissable text-center">{{errorMsg}}</div>
+    <mat-card-content>
+      <form class="login-form">
+  
+        <mat-form-field>
+          <input matInput placeholder="Email" [(ngModel)]="user.email"  name="email" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="First Name" [(ngModel)]="user.first_name"  name="first_name" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+              <input matInput placeholder="Last Name" [(ngModel)]="user.last_name" name="last_name" required>
+            </mat-form-field>
+            <br>
+          <mat-form-field>
+              <mat-select  placeholder="Select location" #singleSelect [(ngModel)]="user.location" >
+                  <mat-option *ngFor="let location of locationRespones.results" [value]="location">
+                    {{location.name}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+        <mat-form-field>
+          <input matInput placeholder="Password" [(ngModel)]="user.password" type="password" name="password" required>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="login()" color="danger">Login</button>
+
+      <button mat-raised-button (click)="registerUser()" color="primary">Register</button>
+    </mat-card-actions>
+  </mat-card>
+    </div>
+  
+  </div>
+

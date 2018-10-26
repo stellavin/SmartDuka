@@ -1,0 +1,26 @@
+<div class="margin">
+    <div class="top alignItem"> 
+        <h3>
+            {{video.name}}
+          </h3>
+    </div>
+  
+  <div class=" cardSize">
+  
+      <mat-card class="example-card">
+          <mat-card-content>
+              <h5>Description</h5>
+              <p>
+             {{video.description}}
+              </p>
+            </mat-card-content>
+            <mat-video src="{{video.file_path}}"></mat-video>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+          </mat-card>
+    
+    </div>
+  
+  </div>
