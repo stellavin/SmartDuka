@@ -47,7 +47,7 @@ export class HttpSettingsService {
       }
 
     public getBaseUrl() {
-        return this.protocol + '://' + this.domain + this.baseUrl;
+        return this.protocol + this.domain + this.baseUrl;
     }
 
 }
